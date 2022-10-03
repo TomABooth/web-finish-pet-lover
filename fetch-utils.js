@@ -41,6 +41,10 @@ export async function createPet(pet) {
 //      - gets all pets from supabase
 //      - order the list by created date
 
+export async function getPets() {
+    return await client.from('pets').select('*');
+}
+
 /* Storage Functions */
 
 export async function uploadImage(bucketName, imagePath, imageFile) {
